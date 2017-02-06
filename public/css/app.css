@@ -4,3 +4,10 @@ body{
 .sub-lista{
 	list-style: none;
 }
+#footer p{
+	font-size: .8rem;
+}
+.link-social{
+	width: 40px;
+	height: 40px;
+}
