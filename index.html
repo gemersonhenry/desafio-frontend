@@ -8,10 +8,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="libs/foundation-5/css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="libs/foundation-5/css/foundation.min.css">
+		<link rel="stylesheet" type="text/css" href="libs/foundation-5/icons/foundation-icons.css">
 		<link rel="stylesheet" type="text/css" href="public/css/app.css">
 	</head>
 	<body>
-		<header id="header">
+		<header id="header"><!-- Planteamiento del desafío -->
 			<div class="row">
 				<div class="small-12 medium-offset-2 medium-8  large-offset-2 large-8 columns">
 					<h3 class="text-center"> <ins> Ordenador en Serie </ins> </h3>
@@ -36,9 +37,54 @@
 					</p>
 				</div>
 			</div>
-		</header><!-- /header -->
+		</header><!-- /header - fin del planteamiento del desafío -->
 		<section id="section">
-			
+			<div class="row">
+				<h3 class="text-center"> <ins> Solución al desafío </ins> </h3>
+			</div>
+			<div class="row">
+				<div class="small-12 medium-offset-3 medium-6 columns">
+					<div class="panel callout radius">
+						<form>
+							<div class="row">
+								<div class="small-12 columns">
+									<label class="text-center">Ingrese un número entero
+										<input type="number" placeholder="Ingrese un número entero"
+											class="large">
+									</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 columns text-center">
+									<input type="submit" value="Agregar número" 
+										class="button small round">
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 columns text-center">
+									<b> Arreglo: <output id="arreglo">Vacío</output> </b>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>					
+			</div>
+			<div class="row">
+				<div class="small-12 medium-offset-3 medium-6 columns">
+					<div class="panel callout radius">
+						<div class="row">
+							<div class="small-12 columns text-center">
+								<button type="button"	class="button small success round">Ordenar arreglo de números</button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-12 columns text-center">
+								<b> Arreglo Ordenado: <output id="arreglo">Vacío</output>	</b>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section><!-- /section -->
 		<footer id="footer">
 			
