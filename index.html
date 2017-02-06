@@ -74,7 +74,7 @@
 					<div class="panel callout radius">
 						<div class="row">
 							<div class="small-12 columns text-center">
-								<button type="button"	class="button small success radius" id="btnOrdenar">
+								<button type="button"	class="button small success radius" id="btnOrdenar" disabled="true">
 									Ordenar Arreglo
 								</button>
 								<button type="button"	class="button small alert radius" id="btnLimpiar">
@@ -83,10 +83,17 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="small-12 columns text-center">
+							<div class="small-12 columns text-center" id="resultado">
 								<b> Arreglo Ordenado: <output id="arregloOrdenado">Vacío</output>	</b>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row hide" id="loading">
+				<div class="small-12 medium-offset-3 medium-6 columns">
+					<div class="progress small-12 success radius">
+						<span class="meter" style=""></span>
 					</div>
 				</div>
 			</div>

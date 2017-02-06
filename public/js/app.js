@@ -10,20 +10,37 @@
 	var arregloInicial = $("#arreglo");
 	var arregloFinal = $("#arregloOrdenado");
 	var btnOrdenar = $("#btnOrdenar");
-	var btnLimpiar = $("#btnLimpiar")
+	var btnLimpiar = $("#btnLimpiar");
+	var loading = $("#loading");
+	var load = $(".meter");
 
 	formulario.submit(function(e) {
 		e.preventDefault();
+		btnOrdenar.prop( "disabled", false );
 		arr.addElemento( numero.val() );
 		arregloInicial.val(arr.stringDeArreglo());
 		numero.val("");
 	});
 	btnOrdenar.click(function(e) {
-		arregloFinal.val(arr.ordenarArreglo());
+		loading.removeClass('hide');
+		var cont = 0;
+		var interval = setInterval(function(){
+			cont += 1;
+			load.css('width', cont+'%');
+			if ( cont>=100 ) {
+				clearInterval(interval);
+			}			
+		}, 10);
+		setTimeout(function() {
+			arregloFinal.val(arr.ordenarArreglo());
+			loading.addClass('hide');
+		}, 1000);
+		
 	});
 	btnLimpiar.click(function(e) {
 		arregloInicial.val("Vacío");
 		arregloFinal.val("Vacío");
+		btnOrdenar.prop( "disabled", true );
 	})
 
 
